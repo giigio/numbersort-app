@@ -45,4 +45,61 @@
   --font-sora: "Sora", serif;
   --font-mono: "Roboto Mono", serif;
   --font-flex: "Roboto Flex", serif;
+
+  --font-lg: 800 4.5rem/1.3 var(--font-sora);
+  --font-md: 700 2.5rem/1.3 var(--font-sora);
+  --font-sm: 700 2rem/1.3 var(--font-sora);
+
+  --font-overline: 700 1rem/1.5 var(--font-mono);
+
+  --font-paragraph-lg: 400 1rem/1.5 var(--font-flex);
+  --font-paragraph-md: 400 0.875rem/1.5 var(--font-flex);
+  --font-paragraph-sm: 400 0.75rem/1.5 var(--font-flex);
+
+  --font-label-md: 700 1.25rem/1.5 var(--font-flex);
+  --font-label-sm: 700 1rem/1.5 var(--font-flex);
+}
+
+html {
+  height: 100%;
+  background-color: var(--bg-primary);
+}
+
+body {
+  height: 100%;
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.9) 22.66%,
+      rgba(0, 0, 0, 0.54) 100%
+    ),
+    url("../assets/background.png");
+  background-size: repeat;
+  padding: 4.75rem 7.5rem;
+  color: var(--content-primary);
+}
+
+header {
+  margin-bottom: 5.6875rem;
+}
+
+h1,
+h3 {
+  text-transform: uppercase;
+}
+
+h1 {
+  font: var(--font-lg);
+}
+
+h3 {
+  font: var(--font-overline);
+}
+
+label {
+  font: var(--font-paragraph-md);
+  color: var(--content-brand);
+}
+
+p {
+  font: var(--font-paragraph-sm);
 }

@@ -1,0 +1,41 @@
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.gap-05 {
+  gap: 0.5rem;
+}
+
+.gap-07 {
+  gap: 0.7rem;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
+.gap-23 {
+  gap: 2.375rem;
+}
+
+.container {
+  align-items: flex-start;
+  width: 32rem;
+}
+
+.container-info {
+  width: 24rem;
+}
+
+.small-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
