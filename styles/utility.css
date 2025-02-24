@@ -10,6 +10,10 @@
   flex-direction: row;
 }
 
+.align-center {
+  align-items: center;
+}
+
 .gap-05 {
   gap: 0.5rem;
 }
@@ -24,6 +28,14 @@
 
 .gap-23 {
   gap: 2.375rem;
+}
+
+.gap-25 {
+  gap: 2.5rem;
+}
+
+.gap-67 {
+  gap: 6.75rem;
 }
 
 .container {

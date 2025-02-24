@@ -17,10 +17,10 @@
     <header>
       <img src="assets/logo.png" alt="logo numbers" />
     </header>
-    <main>
+    <main class="flex flex-row gap-67">
       <div class="container flex flex-column gap-23">
         <div class="flex flex-column gap-07">
-          <h3>Online - gratuito</h3>
+          <h4>Online - gratuito</h4>
           <h1>Sorteador de Números</h1>
         </div>
         <div class="flex flex-row gap-05 container-info">
@@ -49,6 +49,29 @@
               Sim, você pode definir os valores mínimo e máximo para o intervalo
               dos números sorteados.
             </p>
+          </div>
+        </div>
+      </div>
+      <div class="container flex flex-column gap-25">
+        <div>
+          <h2>Quero sortear:</h2>
+          <span
+            >defina o intervalo e a quantidade de números, clique em "Sortear" e
+            veja os resultados na tela. É rápido e fácil!</span
+          >
+        </div>
+        <div class="flex flex-row gap-1">
+          <div class="flex flex-column align-center gap-05">
+            <h3>Números</h3>
+            <input type="text" id="numbers" name="numbers" />
+          </div>
+          <div class="flex flex-column align-center gap-05">
+            <h3>De</h3>
+            <input type="text" id="from" name="from" />
+          </div>
+          <div class="flex flex-column align-center gap-05">
+            <h3>Até</h3>
+            <input type="text" id="to" name="to" />
           </div>
         </div>
       </div>

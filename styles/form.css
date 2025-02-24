@@ -1,0 +1,12 @@
+input {
+  all: unset;
+  padding: 4px 8px;
+  height: 3.5rem;
+  width: 5.375rem;
+  border-radius: 8px;
+  border: 1px solid var(--bg-secondary);
+  background: var(--bg-secondary);
+  color: var(--content-primary);
+  text-align: center;
+  font: var(--font-sm);
+}
