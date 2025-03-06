@@ -1,0 +1,41 @@
+.result-container {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  width: 32rem;
+
+  & h4 {
+    all: unset;
+
+    font: var(--font-overline);
+    color: var(--content-secondary);
+    text-transform: uppercase;
+  }
+}
+
+#result {
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px;
+
+  & div {
+    display: flex;
+    width: 84px;
+    height: 100px;
+    padding: 18px 22px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 28px;
+
+    color: var(--content-brand);
+    text-align: center;
+    font-family: "Roboto Mono";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; /* 72px */
+    text-transform: uppercase;
+  }
+}

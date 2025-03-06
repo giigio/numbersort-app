@@ -3,6 +3,10 @@ const from = document.getElementById("from");
 const to = document.getElementById("to");
 const repeat = document.getElementById("repeat");
 
+const sortContainer = document.getElementsByClassName("sort-container")[0];
+const resultContainer = document.getElementsByClassName("result-container")[0];
+const sortedNumbersContainer = document.getElementById("result");
+
 document.addEventListener("input", (e) => {
   if (e.target.classList.contains("number-only")) {
     return (e.target.value = e.target.value.replace(/\D/g, ""));
@@ -27,6 +31,26 @@ document.getElementById("generate").addEventListener("click", (e) => {
     return;
   }
 
+  sortContainer.style.display = "none";
+  resultContainer.style.display = "flex";
+
+  showSortedNumbers(firstValue, lastValue, numberQtd, noRepeatedValue);
+
+  numbers.value = "";
+  from.value = "";
+  to.value = "";
+  repeat.checked = false;
+});
+
+document.getElementById("redo").addEventListener("click", (e) => {
+  e.preventDefault();
+  sortContainer.style.display = "flex";
+  resultContainer.style.display = "none";
+
+  sortedNumbersContainer.innerHTML = "";
+});
+
+function showSortedNumbers(firstValue, lastValue, numberQtd, noRepeatedValue) {
   let sortedNumbers = [];
 
   for (let i = 0; i < numberQtd; i++) {
@@ -41,5 +65,11 @@ document.getElementById("generate").addEventListener("click", (e) => {
     sortedNumbers.push(randomNumber);
   }
 
-  console.log(sortedNumbers);
-});
+  sortedNumbersContainer.innerHTML = "";
+
+  sortedNumbers.forEach((number) => {
+    const numberElement = document.createElement("div");
+    numberElement.textContent = number;
+    sortedNumbersContainer.appendChild(numberElement);
+  });
+}

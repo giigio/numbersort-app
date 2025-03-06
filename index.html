@@ -52,7 +52,7 @@
           </div>
         </div>
       </div>
-      <div class="container flex flex-column gap-40">
+      <div class="container sort-container flex flex-column gap-40">
         <div>
           <h2>Quero sortear:</h2>
           <span
@@ -95,6 +95,17 @@
         <button id="generate" class="sort-button">
           <span>Sortear</span>
           <img src="assets/icons/arrow-right.svg" alt="ícone seta a direita" />
+        </button>
+      </div>
+      <div class="result-container flex flex-column align-center gap-40">
+        <div class="flex flex-column align-center gap-8">
+          <h2>Resultado do sorteio</h2>
+          <h4>1º resultado</h4>
+        </div>
+        <div class="flex flex-row" id="result"></div>
+        <button id="redo" class="sort-button">
+          <span>Sortear Novamente</span>
+          <img src="assets/icons/redo.svg" alt="ícone refazer" />
         </button>
       </div>
     </main>
