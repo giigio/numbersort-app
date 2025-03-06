@@ -1,0 +1,18 @@
+.sort-button {
+  all: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  width: 482px;
+  padding: 16px;
+  border-radius: 8px;
+  background: var(--bg-tertiary);
+  cursor: pointer;
+
+  & span {
+    font: var(--font-label-md);
+    color: var(--content-primary);
+    text-transform: uppercase;
+  }
+}

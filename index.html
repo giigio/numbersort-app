@@ -17,13 +17,13 @@
     <header>
       <img src="assets/logo.png" alt="logo numbers" />
     </header>
-    <main class="flex flex-row gap-67">
-      <div class="container flex flex-column gap-23">
-        <div class="flex flex-column gap-07">
+    <main class="flex flex-row gap-108">
+      <div class="container flex flex-column gap-38">
+        <div class="flex flex-column gap-11">
           <h4>Online - gratuito</h4>
           <h1>Sorteador de Números</h1>
         </div>
-        <div class="flex flex-row gap-05 container-info">
+        <div class="flex flex-row gap-8 container-info">
           <img
             src="assets/icons/person-bubble.svg"
             alt="ícone pessoa falando"
@@ -37,7 +37,7 @@
             </p>
           </div>
         </div>
-        <div class="flex flex-row gap-05 container-info">
+        <div class="flex flex-row gap-8 container-info">
           <img
             src="assets/icons/person-bubble.svg"
             alt="ícone pessoa falando"
@@ -52,7 +52,7 @@
           </div>
         </div>
       </div>
-      <div class="container flex flex-column gap-25">
+      <div class="container flex flex-column gap-40">
         <div>
           <h2>Quero sortear:</h2>
           <span
@@ -60,22 +60,27 @@
             veja os resultados na tela. É rápido e fácil!</span
           >
         </div>
-        <form action="" class="flex flex-column gap-1">
-          <div class="flex flex-row gap-1">
-            <div class="flex flex-column align-center gap-05">
+        <form action="" class="flex flex-column gap-20">
+          <div class="flex flex-row gap-16">
+            <div class="flex flex-column align-center gap-8">
               <h3>Números</h3>
-              <input type="text" id="numbers" name="numbers" />
+              <input
+                type="text"
+                id="numbers"
+                name="numbers"
+                class="number-only"
+              />
             </div>
-            <div class="flex flex-column align-center gap-05">
+            <div class="flex flex-column align-center gap-8">
               <h3>De</h3>
-              <input type="text" id="from" name="from" />
+              <input type="text" id="from" name="from" class="number-only" />
             </div>
-            <div class="flex flex-column align-center gap-05">
+            <div class="flex flex-column align-center gap-8">
               <h3>Até</h3>
-              <input type="text" id="to" name="to" />
+              <input type="text" id="to" name="to" class="number-only" />
             </div>
           </div>
-          <div class="switch__container">
+          <div class="flex flex-row gap-8 align-center justify-center">
             <input
               type="checkbox"
               id="repeat"
@@ -83,9 +88,16 @@
               class="switch switch--shadow"
             />
             <label for="repeat"> </label>
+            <p>Não repetir número</p>
           </div>
         </form>
+
+        <button id="generate" class="sort-button">
+          <span>Sortear</span>
+          <img src="assets/icons/arrow-right.svg" alt="ícone seta a direita" />
+        </button>
       </div>
     </main>
   </body>
+  <script src="script.js"></script>
 </html>

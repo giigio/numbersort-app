@@ -84,3 +84,7 @@ input[type="checkbox"] {
 .switch--shadow:checked + label:after {
   transform: translateX(10px);
 }
+
+p {
+  color: var(--content-primary);
+}
