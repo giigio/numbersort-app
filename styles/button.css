@@ -1,4 +1,4 @@
-.sort-button {
+.gradient-button {
   all: unset;
   display: flex;
   justify-content: center;
@@ -7,12 +7,59 @@
   width: 482px;
   padding: 16px;
   border-radius: 8px;
-  background: var(--bg-tertiary);
+  background: transparent;
   cursor: pointer;
 
+  position: relative;
+
   & span {
+    position: relative;
+    z-index: 1;
     font: var(--font-label-md);
     color: var(--content-primary);
     text-transform: uppercase;
+  }
+  & img {
+    z-index: 1;
+  }
+}
+
+.gradient-button:before {
+  content: "";
+  position: absolute;
+  background: var(--gradient-border);
+  height: calc(100% + 2px);
+  width: calc(100% + 2px);
+  border-radius: 8px;
+  z-index: 0;
+  background-size: 200%;
+}
+
+.gradient-button:hover:before {
+  animation: gradient 3s ease infinite alternate;
+}
+
+.gradient-button::after {
+  content: "";
+  position: absolute;
+  background: var(--bg-tertiary);
+  height: calc(100% + 4px);
+  width: calc(100% + 4px);
+  border-radius: 8px;
+  z-index: 0;
+}
+
+.gradient-button:hover:after {
+  height: calc(100% - 2px);
+  width: calc(100% - 2px);
+  animation: gradient 3s ease infinite alternate;
+}
+
+@keyframes gradient {
+  from {
+    background-position: 0% 50%;
+  }
+  to {
+    background-position: 100% 50%;
   }
 }
