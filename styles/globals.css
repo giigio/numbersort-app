@@ -135,3 +135,7 @@ span {
   font: var(--font-paragraph-lg);
   color: var(--content-secondary);
 }
+
+.mobile-only {
+  display: none !important;
+}
