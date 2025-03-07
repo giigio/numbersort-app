@@ -1,6 +1,6 @@
 @media (width <= 80em) {
   body {
-    height: fit-content;
+    height: calc(100% + 12rem);
   }
 
   main {
