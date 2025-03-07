@@ -67,9 +67,11 @@ function showSortedNumbers(firstValue, lastValue, numberQtd, noRepeatedValue) {
 
   sortedNumbersContainer.innerHTML = "";
 
-  sortedNumbers.forEach((number) => {
-    const numberElement = document.createElement("div");
-    numberElement.textContent = number;
-    sortedNumbersContainer.appendChild(numberElement);
+  sortedNumbers.forEach((number, i) => {
+    setTimeout(() => {
+      const numberElement = document.createElement("div");
+      numberElement.textContent = number;
+      sortedNumbersContainer.appendChild(numberElement);
+    }, i * 3600);
   });
 }
