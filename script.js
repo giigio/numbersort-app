@@ -6,6 +6,7 @@ const repeat = document.getElementById("repeat");
 const sortContainer = document.getElementsByClassName("sort-container")[0];
 const resultContainer = document.getElementsByClassName("result-container")[0];
 const sortedNumbersContainer = document.getElementById("result");
+const redoButton = document.getElementById("redo");
 
 document.addEventListener("input", (e) => {
   if (e.target.classList.contains("number-only")) {
@@ -13,7 +14,7 @@ document.addEventListener("input", (e) => {
   }
 });
 
-document.getElementById("generate").addEventListener("click", (e) => {
+document.getElementById("generate").addEventListener("click", async (e) => {
   e.preventDefault();
 
   const numberQtd = parseInt(numbers.value);
@@ -34,7 +35,8 @@ document.getElementById("generate").addEventListener("click", (e) => {
   sortContainer.style.display = "none";
   resultContainer.style.display = "flex";
 
-  showSortedNumbers(firstValue, lastValue, numberQtd, noRepeatedValue);
+  await showSortedNumbers(firstValue, lastValue, numberQtd, noRepeatedValue);
+  redoButton.classList.add("active");
 
   numbers.value = "";
   from.value = "";
@@ -48,6 +50,7 @@ document.getElementById("redo").addEventListener("click", (e) => {
   resultContainer.style.display = "none";
 
   sortedNumbersContainer.innerHTML = "";
+  redoButton.classList.remove("active");
 });
 
 function showSortedNumbers(firstValue, lastValue, numberQtd, noRepeatedValue) {
@@ -67,11 +70,17 @@ function showSortedNumbers(firstValue, lastValue, numberQtd, noRepeatedValue) {
 
   sortedNumbersContainer.innerHTML = "";
 
-  sortedNumbers.forEach((number, i) => {
-    setTimeout(() => {
-      const numberElement = document.createElement("div");
-      numberElement.textContent = number;
-      sortedNumbersContainer.appendChild(numberElement);
-    }, i * 3600);
+  return new Promise((resolve) => {
+    sortedNumbers.forEach((number, i) => {
+      setTimeout(() => {
+        const numberElement = document.createElement("div");
+        numberElement.textContent = number;
+        sortedNumbersContainer.appendChild(numberElement);
+
+        if (i === sortedNumbers.length - 1) {
+          setTimeout(resolve, 3600);
+        }
+      }, i * 3600);
+    });
   });
 }
