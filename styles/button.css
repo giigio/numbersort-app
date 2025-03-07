@@ -55,11 +55,48 @@
   animation: gradient 3s ease infinite alternate;
 }
 
+#redo {
+  display: none;
+}
+
+#redo.active {
+  display: flex;
+}
+
+#redo:hover img {
+  animation: rotate 2s linear infinite;
+}
+
+#generate:hover img {
+  animation: bounce 2s ease infinite alternate;
+}
+
 @keyframes gradient {
   from {
     background-position: 0% 50%;
   }
   to {
     background-position: 100% 50%;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

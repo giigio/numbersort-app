@@ -58,14 +58,6 @@
   }
 }
 
-#redo {
-  display: none;
-}
-
-#redo.active {
-  display: flex;
-}
-
 @keyframes background {
   0% {
     opacity: 0;
