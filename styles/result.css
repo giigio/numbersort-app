@@ -21,10 +21,8 @@
 }
 
 #result {
-  width: 100%;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.8rem;
 
   & div {
     display: flex;
@@ -55,6 +53,11 @@
     border-radius: 1.75rem;
     z-index: 2;
     animation: background 3.5s ease-in-out forwards;
+  }
+
+  & div:not(:last-child) {
+    margin-right: 0.8rem;
+    transition: margin-right 0.26s cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
