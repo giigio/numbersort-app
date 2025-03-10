@@ -9,7 +9,6 @@
   }
   .container {
     width: 100%;
-    align-items: center;
 
     & h1 {
       font: var(--font-md);
@@ -52,7 +51,6 @@
 
 @media (width <= 40em) {
   .container {
-    width: 100%;
     align-items: center;
     & .container-info {
       width: 100%;
